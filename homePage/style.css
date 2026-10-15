@@ -406,3 +406,177 @@ nav .right-side{
     color: #F9D71C;
     font-size: 18px;
 }
+
+/* ===== BURGER & DRAWER ===== */
+
+/* di desktop: burger, overlay, drawer tidak tampil */
+.burger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: #000;
+    flex: none;
+}
+
+.burger span {
+    font-size: 28px;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 998;
+}
+
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    max-width: 80%;
+    height: 100%;
+    background: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+    overflow-y: auto;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.drawer.open {
+    transform: translateX(0);
+}
+
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+}
+
+.drawer-header img {
+    width: 130px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.drawer-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border: 1px solid #c2c1c1;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.drawer-close:hover {
+    border-color: #03AC0E;
+    color: #03AC0E;
+}
+
+.drawer-list {
+    list-style: none;
+    margin: 8px 0 0;
+    padding: 0;
+}
+
+.drawer-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: #6d7588;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.drawer-item:hover {
+    background: #edf0f4;
+    color: #03AC0E;
+}
+
+.drawer-item span {
+    font-size: 22px;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    nav {
+        height: auto;
+        /* tinggi mengikuti 2 baris */
+        padding: 8px 12px;
+    }
+
+    nav .left-side {
+        flex: 1;
+        flex-wrap: wrap;
+        /* search turun ke baris bawah */
+        gap: 8px 10px;
+        padding-right: 0;
+        justify-content: center;
+    }
+
+    nav .left-side::before {
+        display: none;
+        /* garis pemisah */
+    }
+
+    .left-side>p {
+        display: none;
+        /* "Kategori" ada di drawer */
+    }
+
+    .more-nav {
+        display: none;
+        /* cart/notif/mail ada di drawer */
+    }
+
+    nav .right-side {
+        display: none;
+        /* Toko & Profil ada di drawer */
+    }
+
+    .left-side .burger {
+        display: flex;
+        position: absolute;
+        /* burger tetap di kiri, tidak mempengaruhi posisi logo */
+        left: 0;
+        top: 4px;
+        /* kiri */
+    }
+
+    .left-side img {
+        width: 110px;
+        order: 2;
+        /* di samping burger */
+    }
+
+    .left-side .search {
+        order: 3;
+        flex: 0 0 100%;
+        /* satu baris penuh di bawah */
+    }
+}

@@ -10,6 +10,9 @@
 <body>
     <nav>
         <div class="left-side">
+            <button class="burger" id="burger" aria-label="Buka Menu" aria-expanded="false">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
             <img src="./Tokopedia-logo.png" alt="Tokopedia Logo">
             <p>Kategori</p>
             <div class="search">
@@ -33,6 +36,23 @@
             </div>
         </div>     
     </nav>
+    <div class="overlay" id="overlay"></div>
+    <aside class="drawer" id="drawer" aria-hidden="true">
+        <div class="drawer-header">
+            <img src="./Tokopedia-logo.png" alt="Tokopedia Logo">
+            <button class="drawer-close" id="drawerClose" aria-label="Tutup menu">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <ul class="drawer-list">
+            <li><a href="#" class="drawer-item"><span class="material-symbols-outlined">category</span>Kategori</a></li>
+            <li><a href="#" class="drawer-item"><span class="material-symbols-outlined">shopping_cart</span>Keranjang</a></li>
+            <li><a href="#" class="drawer-item"><span class="material-symbols-outlined">notifications</span>Notifikasi</a></li>
+            <li><a href="#" class="drawer-item"><span class="material-symbols-outlined">mail</span>Pesan</a></li>
+            <li><a href="#" class="drawer-item"><span class="material-symbols-outlined">storefront</span>Toko</a></li>
+            <li><a href="#" class="drawer-item"><span class="material-symbols-outlined">person</span>Profil</a></li>
+        </ul>
+    </aside>
     <main>
         <div class="carousel">
             <div class="carousel-track">
@@ -122,5 +142,6 @@
         </div>
     </main>
     <script src="./ajaxScript.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
