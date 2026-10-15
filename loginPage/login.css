@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.logo {
+    color: #42B549;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.card {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 35px 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.head h2 {
+    font-size: 22px;
+    color: black;
+}
+
+.head a {
+    color: #42B549;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #bfc9d9;
+    border-radius: 8px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #03ac0e;
+}
+
+.contoh {
+    font-size: 13px;
+    color: #6d7588;
+    margin-top: 6px;
+}
+
+.lupa {
+    text-align: right;
+    margin: 15px 0 20px 0;
+    font-size: 14px;
+}
+
+.lupa a {
+    color: #03ac0e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-next {
+    width: 100%;
+    padding: 13px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #03ac0e;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-next:hover {
+    background-color: #028a0b;
+}
+
+.atau {
+    text-align: center;
+    font-size: 14px;
+    color: #6d7588;
+    margin: 25px 0 15px 0;
+}
+
+.btn-google {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #6d7588;
+    background-color: #ffffff;
+    border: 1px solid #bfc9d9;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-google:hover {
+    background-color: #f3f4f5;
+}
+
+.bawah {
+    text-align: center;
+    font-size: 14px;
+    color: #6d7588;
+    margin-top: 25px;
+}
+
+.bawah a {
+    color: #03ac0e;
+    text-decoration: none;
+    font-weight: bold;
+}
