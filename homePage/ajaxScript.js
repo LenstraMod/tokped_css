@@ -8,6 +8,7 @@ async function loadProduct() {
             throw new Error("Server error: " + response.status);
         }
 
+        
         const data = await response.json();
 
         list.innerHTML = "";

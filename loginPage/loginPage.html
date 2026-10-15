@@ -15,13 +15,34 @@
       <a href="#">Daftar</a>
     </div>
 
-    <form>
-      <input type="text" id="akun" placeholder="Nomor Ponsel atau Email">
-      <p class="contoh">Contoh: email@tokopedia.com</p>
+    <form id="formLogin" novalidate>
+      <!-- Langkah 1: akun -->
+      <div id="stepAkun">
+        <input type="text" id="akun" placeholder="Nomor Ponsel atau Email" autocomplete="username">
+        <p class="contoh">Contoh: email@tokopedia.com</p>
+        <p class="demo">Demo: coba <b>emilys</b> / <b>emilyspass</b></p>
+      </div>
+
+      <!-- Langkah 2: kata sandi (muncul setelah akun ditemukan) -->
+      <div id="stepPassword" style="display:none">
+        <div class="user-info">
+          <img id="avatar" src="" alt="">
+          <div>
+            <strong id="namaUser"></strong>
+            <a href="#" id="ganti">Bukan kamu?</a>
+          </div>
+        </div>
+        <div class="pass-wrap">
+          <input type="password" id="password" placeholder="Kata Sandi" autocomplete="current-password">
+          <button type="button" id="togglePass">Tampilkan</button>
+        </div>
+      </div>
+
+      <p id="pesan" class="pesan" style="display:none"></p>
 
       <p class="lupa"><a href="#">Lupa Kata Sandi?</a></p>
 
-      <button type="submit" class="btn-next">Selanjutnya</button>
+      <button type="submit" id="btnNext" class="btn-next">Selanjutnya</button>
     </form>
 
     <p class="atau">atau masuk dengan</p>
@@ -29,5 +50,8 @@
 
     <p class="bawah">Belum punya akun Tokopedia? <a href="#">Daftar</a></p>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="login.js"></script>
 </body>
 </html>

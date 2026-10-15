@@ -128,3 +128,93 @@ input:focus {
     text-decoration: none;
     font-weight: bold;
 }
+
+/* ===== Tambahan untuk JavaScript / jQuery / AJAX ===== */
+input.invalid {
+    border-color: #e02020;
+}
+
+.demo {
+    font-size: 12px;
+    color: #6d7588;
+    margin-top: 4px;
+}
+
+.pesan {
+    font-size: 14px;
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+.pesan.error {
+    color: #b3261e;
+    background-color: #fdecea;
+}
+
+.pesan.sukses {
+    color: #027a0b;
+    background-color: #e6f7e7;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.user-info img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #f3f4f5;
+}
+
+.user-info a {
+    display: block;
+    font-size: 13px;
+    color: #03ac0e;
+    text-decoration: none;
+}
+
+.pass-wrap {
+    position: relative;
+}
+
+.pass-wrap input {
+    padding-right: 100px;
+}
+
+.pass-wrap button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #03ac0e;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-next:disabled {
+    background-color: #9fd9a3;
+    cursor: not-allowed;
+}
+
+.spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #ffffff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    vertical-align: -2px;
+    animation: putar 0.7s linear infinite;
+}
+
+@keyframes putar {
+    to { transform: rotate(360deg); }
+}
